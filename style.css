@@ -21,16 +21,13 @@ p {
   margin: 1em auto;
   border: 2px solid black;
   text-align: center;
+  display: block;
   padding: 20px;
   font-family: inherit;
   font-size: 3em;
 }
 
-button {
-  align-self: auto;
-}
-
-#nextCard {
+#submissionForm * {
   display: block;
   margin: 1em auto;
   text-align: center;
@@ -41,6 +38,9 @@ button {
 
 @media (max-width: 500px) {
       h1 {
-          font-size: 1em;
+          font-size: 2em;
+      }
+      p {
+        font-size: 1em;
       }
     }
