@@ -1,0 +1,23 @@
+* {
+  font-family: Georgia, serif;
+}
+
+h1 {
+  font-family: inherit;
+  font-size: 3.5em;
+}
+
+p {
+  font-size: 1.5em
+}
+
+.flashCard {
+    width: 400px;
+    height: 200px;
+    margin: 1em auto;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    font-family: inherit;
+    font-size: 3em;
+}
