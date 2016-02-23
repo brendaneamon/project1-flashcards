@@ -28,7 +28,7 @@ p {
 }
 
 #submissionForm * {
-  display: block;
+  display: inline-block;
   margin: 1em auto;
   text-align: center;
   padding: 2px;
