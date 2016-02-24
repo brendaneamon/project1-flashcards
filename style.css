@@ -27,6 +27,15 @@ p {
   font-size: 3em;
 }
 
+.answerAccuracy {
+  margin: 1em auto;
+  text-align: center;
+  display: block;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 3em;
+}
+
 #submissionForm * {
   display: inline-block;
   margin: 1em auto;
