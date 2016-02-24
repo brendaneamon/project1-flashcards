@@ -1,10 +1,12 @@
 var form = document.getElementById("submissionForm");
 var input = document.querySelector("#answer");
 var flashCard = document.querySelector(".flashCard");
-var answerAccuracy = document.querySelector(".answerAccuracy")
-var i = 0;
+var teacherResponse = document.querySelector(".teacherResponse");
 
 var vocabWords = [["m&emacr; (pronoun)" , "me"] , ["quid (pronoun)" , "what"] , ["nihil (noun)" , "nothing"] , ["n&omacr;n (adverb)" , "not"] , ["saepe (adverb)" , "often"] , ["s&imacr; (conjunction)" , "if"] , ["amo, amare, amavi, amatum (verb)" , "to love"] , ["cogito, cogitare, cogitavi, cogitatum (verb)" , "to think"] , ["debeo, deb&emacr;re, debui, debitum (verb)" , "to owe"] , ["do, dare, dedi, datum (irreg. verb)" , "to give"] , ["erro, errare, erravi, erratum (verb)" , "to wander"] , ["laudo, laudare, laudavi, laudatum (verb)" , "to praise"] , ["moneo, mon&emacr;re, monui, monitum (verb)" , "to remind"] , ["salveo, salv&emacr;re, &mdash; (verb)" , "to be well"] , ["servo, servare, servavi, servatum (verb)" , "to preserve"] , ["conservo, conservare, conservavi, conservatum (verb)" , "to conserve"] , ["terreo, terr&emacr;re, terrui, territum (verb)" , "to frighten"] , ["valeo, val&emacr;re, valui, valiturum (verb)" , "to be strong"] , ["video, vid&emacr;re, vidi, visum (verb)" , "to see"] , ["voco, vocare, vocavi, vocatus (verb)" , "to call"]];
+
+var correctAnswers = [];
+var incorrectAnswers =[];
 
 var shuffleCards = function() {
   vocabWords.sort(function() {
@@ -20,21 +22,29 @@ var shuffleCards = function() {
 
 shuffleCards();
 
-var displayWord = function(i) {
-  flashCard.innerHTML = vocabWords[i][0];
+var displayWord = function() {
+  flashCard.innerHTML = vocabWords[0][0];
   };
 
 form.addEventListener("submit" , function(evt){
   evt.preventDefault();
-  if (input.value === vocabWords[i][1]) {
-    answerAccuracy.innerHTML = "You got it! The correct answer was '" + vocabWords[i][1] +".'";
-    i++;
-    displayWord(i);
-    } else {
-    answerAccuracy.innerHTML = "Sorry, but that's incorrect. The correct answer was '" + vocabWords[i][1] +".'";
-    i++;
-    displayWord(i);
-  }
+  while (vocabWords.length > 0){
+    if (input.value === vocabWords[0][1]) {
+      teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
+      var correctCard = vocabWords.shift();
+      correctAnswers.push(correctCard);
+      displayWord();
+      } else {
+      teacherResponse.innerHTML = "Sorry, but that's incorrect. The correct answer was '" + vocabWords[0][1] +".'";
+      var incorrectCard = vocabWords.shift();
+      incorrectAnswers.push(incorrectCard);
+      displayWord();
+      }
+    }
 });
 
-displayWord(i);
+if (vocabWords.length < 1) {
+  teacherResponse.innerHTML = "Game over! You had " + correctAnswers.length + " correct answers and " + incorrectAnswers.length + " incorrect answers.";
+}
+
+displayWord();
