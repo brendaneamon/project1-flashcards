@@ -30,7 +30,7 @@ p {
 #submissionForm * {
   display: inline-block;
   margin: 1em auto;
-  text-align: center;
+  text-align: left;
   padding: 2px;
   font-family: inherit;
   font-size: 2em;
