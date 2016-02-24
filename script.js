@@ -23,28 +23,26 @@ var shuffleCards = function() {
 shuffleCards();
 
 var displayWord = function() {
-  flashCard.innerHTML = vocabWords[0][0];
+  flashCard.innerHTML = vocabWords[0][0]
   };
 
-form.addEventListener("submit" , function(evt){
-  evt.preventDefault();
-  while (vocabWords.length > 0){
-    if (input.value === vocabWords[0][1]) {
-      teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
-      var correctCard = vocabWords.shift();
-      correctAnswers.push(correctCard);
-      displayWord();
-      } else {
-      teacherResponse.innerHTML = "Sorry, but that's incorrect. The correct answer was '" + vocabWords[0][1] +".'";
-      var incorrectCard = vocabWords.shift();
-      incorrectAnswers.push(incorrectCard);
-      displayWord();
-      }
-    }
-});
+  form.addEventListener("submit" , function(evt){
+    evt.preventDefault();
+      if (input.value === vocabWords[0][1]) {
+        teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
+        var correctCard = vocabWords.shift();
+        correctAnswers.push(correctCard);
+        ((vocabWords.length > 0) ? displayWord() : gameOver());
+        } else {
+        teacherResponse.innerHTML = "Sorry, but that's incorrect. The correct answer was '" + vocabWords[0][1] +".'";
+        var incorrectCard = vocabWords.shift();
+        incorrectAnswers.push(incorrectCard);
+        ((vocabWords.length > 0) ? displayWord() : gameOver());
+        }
+  });
 
-if (vocabWords.length < 1) {
+function gameOver() {
   teacherResponse.innerHTML = "Game over! You had " + correctAnswers.length + " correct answers and " + incorrectAnswers.length + " incorrect answers.";
-}
+};
 
 displayWord();
