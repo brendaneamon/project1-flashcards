@@ -4,23 +4,23 @@ var flashCard = document.querySelector(".flashCard");
 var teacherResponse = document.querySelector(".teacherResponse");
 
 var vocabWords = [
-["m&emacr; (pronoun)" , "me"] , ["quid (pronoun)" , "what"] ,
+["m&emacr; (pronoun)" , "me, myself"] , ["quid (pronoun)" , "what"] ,
 ["nihil (noun)" , "nothing"] , ["n&omacr;n (adverb)" , "not"] ,
 ["saepe (adverb)" , "often"] , ["s&imacr; (conjunction)" , "if"] ,
-["amo, amare, amavi, amatum (verb)" , "to love"] ,
-["cogito, cogitare, cogitavi, cogitatum (verb)" , "to think"] ,
-["debeo, deb&emacr;re, debui, debitum (verb)" , "to owe"] ,
-["do, dare, dedi, datum (irreg. verb)" , "to give"] ,
-["erro, errare, erravi, erratum (verb)" , "to wander"] ,
-["laudo, laudare, laudavi, laudatum (verb)" , "to praise"] ,
-["moneo, mon&emacr;re, monui, monitum (verb)" , "to remind"] ,
-["salveo, salv&emacr;re, &mdash; (verb)" , "to be well"] ,
-["servo, servare, servavi, servatum (verb)" , "to preserve"] ,
-["conservo, conservare, conservavi, conservatum (verb)" , "to conserve"] ,
-["terreo, terr&emacr;re, terrui, territum (verb)" , "to frighten"] ,
-["valeo, val&emacr;re, valui, valiturum (verb)" , "to be strong"] ,
-["video, vid&emacr;re, vidi, visum (verb)" , "to see"] ,
-["voco, vocare, vocavi, vocatus (verb)" , "to call"]];
+["amo, amare, amavi, amatum (verb)" , "love, like"] ,
+["cogito, cogitare, cogitavi, cogitatum (verb)" , "think, ponder, consider, plan"] ,
+["debeo, deb&emacr;re, debui, debitum (verb)" , "owe, ought, must"] ,
+["do, dare, dedi, datum (irreg. verb)" , "give, offer"] ,
+["erro, errare, erravi, erratum (verb)" , "wander, err, go astray, make a mistake, be mistaken"] ,
+["laudo, laudare, laudavi, laudatum (verb)" , "praise"] ,
+["moneo, mon&emacr;re, monui, monitum (verb)" , "remind, advise, warn"] ,
+["salveo, salv&emacr;re, &mdash; (verb)" , "be well, be in good health"] ,
+["servo, servare, servavi, servatum (verb)" , "preserve, save, keep, guard"] ,
+["conservo, conservare, conservavi, conservatum (verb)" , "preserve, conserve, maintain"] ,
+["terreo, terr&emacr;re, terrui, territum (verb)" , "frighten, terrify"] ,
+["valeo, val&emacr;re, valui, valiturum (verb)" , "be strong, have power, be well"] ,
+["video, vid&emacr;re, vidi, visum (verb)" , "see, observe, understand, seem (passive only)"] ,
+["voco, vocare, vocavi, vocatus (verb)" , "call, summon"]];
 
 var correctAnswers = [];
 var incorrectAnswers =[];
@@ -46,7 +46,7 @@ var displayWord = function() {
 form.addEventListener("submit" , function(evt){
   evt.preventDefault();
   var response = (input.value).toLowerCase();
-    if (response === vocabWords[0][1]) {
+    if ((vocabWords[0][1]).includes(response)) {
       teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
       var correctCard = vocabWords.shift();
       correctAnswers.push(correctCard);
