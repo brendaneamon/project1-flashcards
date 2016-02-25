@@ -32,7 +32,7 @@ This web application was built using HTML, CSS, and Vanilla JavaScript.
 Installation instructions
 -------------------------
 
-Users may access this app at URL and may play the flash card game in whatever browser they prefer (Chrome or Firefox recommended).
+Users may access this app at [GitHub Pages] (http://brendaneamon.github.io/project1-flashcards/) and may play the flash card game in whatever browser they prefer (Chrome or Firefox recommended).
 
 
 Approach Taken & Challenges Faced
