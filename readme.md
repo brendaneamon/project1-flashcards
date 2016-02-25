@@ -16,8 +16,16 @@ Future versions of this application may include enhancements such as these:
 * A reset button to allow the user to reshuffle the cards without refreshing the page
 * A running tally of scores
 
+
+User Stories
+------------
+
+User stories for this project are [available on Trello] (https://trello.com/b/DQMoJaGz) at the following URL: https://trello.com/b/DQMoJaGz.
+
+
 Technologies Used
 -----------------
+
 This web application was built using HTML, CSS, and Vanilla JavaScript.
 
 
@@ -26,11 +34,17 @@ Approach Taken & Challenges Faced
 
 The application was envisioned as a simple flash card game with a Roman-themed background image and some text images. I began by setting down the overview and purpose of the application (*vide supra* – "see above", for non-Latinists) and creating some basic user stories. Lest I get overly ambitious with my plans, I narrowed the scope to a single chapter of a popular Latin textbook used by high school and college students.
 
-I began with the HTML, which was simple enough and has remained largely unchanged for the duration of the project. The concept was simple: A header, some instructions, and a `<div>` tag to contain the flash card itself. I used a text submission for user input and then added another `<div>` wherein the "instructor" response to the student's answer would appear.
+I began with the HTML, which was uncomplicated and has remained largely unchanged for the duration of the project. The concept was simple: A header, some instructions, and a `<div>` tag to contain the flash card itself. I used a text submission for user input and then added another `<div>` wherein the "instructor" response to the student's answer would appear.
 
 Next, I began entering the vocabulary items into two separate arrays in the `script.js` file. After some consultation with instructors, I changed the approach to a single nested array, with 20 vocabulary words each consisting of an array of two elements. I also declared a number of global variables to make it easier to target the various HTML elements where the flash card text and answers would be displayed.
 
-I spent a good amount of time on the second project day trying to establish a preliminary layout in CSS, and this has remained unchanged since the morning of the second project day. My next challenge was 
+I spent a good amount of time on the second project day trying to establish a preliminary layout in CSS, and this has remained largely unchanged since that morning. My next step was to determine how best to access vocabulary items in the array, which also proved relatively straightforward. The biggest challenge was figuring out how to cycle through each entry in the array in order, displaying each one in turn. I first attempted a `for` loop and then a `while` loop, each of which ended up looping through the entire array before displaying anything to the user.
+
+I had a good deal of help from instructors (particularly Joe, who, felicitously enough, has a background in Latin) in figuring out how to create the `displayWord()` function and how to use an event listener to check user submissions against the array of vocabulary items. Once I had this figured out, I was able to use the shuffling method that we employed in creating the "High Card" game for homework.
+
+A new challenge arose when I had to figure out how to make the game end when the user had cycled through all the cards. Ultimately, I created two new, empty arrays for correct answers and incorrect answers. I used `array.shift()` to remove each card from the top of the stack; `array.push()` was utilized for placing the card in the appropriate array, depending on whether or not the answer was correct.
+
+By the end of the third project day, I had a functioning flash card game with some bare-bones styling. I solicited feedback from a friend, who is a senior web developer. He provided me with some helpful suggestions about how to improve my app, so of which I incorporated into the version
 
 
 Gold, Silver, & Bronze versions
@@ -41,8 +55,3 @@ The **Bronze** version of this application should, at a minimum, include a squar
 The **Silver** version of the app should have all the same functionality as the Bronze version described above; however, it should also include improvements to styling, including background images, buttons, etc. The app will keep track of which cards were correct and which ones were incorrect and will provide a simple alert to the user about whether he or she got the word right or not. The silver version may also include multiple options for English input, instead of just one.
 
 The **Gold** version of this application should have all the features described in the preceding section: a pleasant UX design is very important to making the experience less painful for the student, who will likely be very frustrated with his or her ability to retain and reproduce the vocabulary items. This version might also include some CSS animations and transitions for cycling through the cards, and perhaps some end of game success screen. Another Gold feature would be responsive design, which would allow users to drill vocabulary on their phones without having to squint to see the words on their screens.
-
-User Stories
-------------
-
-User stories for this project are [available on Trello] (https://trello.com/b/DQMoJaGz) at the following URL: https://trello.com/b/DQMoJaGz.
