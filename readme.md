@@ -61,6 +61,8 @@ My final step in this project was to clean up the CSS a bit more (as much as is 
 Unsolved Problems
 -----------------
 
+The most obvious problem is that it is easy to "trick" the application into thinking you have a correct answer, because you only have to enter two correct letters to get a "Good job!" in response. This is mitigated by the fact that the app is a study tool and not an actual assessment. If this were a test, I would want to implement a way to check the user input for accuracy more stringently. It was suggested to me that I use `indexOf()` to check if the string provided by the user matches the values in the array. Implementation of this feature would be a primary goal for the next release of the app.
+
 Given some additional time, I believe I could implement a way for users to flip through cards in English-to-Latin or Latin-to-English mode. I would also try to take the cards from the `incorrectAnswers` array and re-display them to the user until the user should provide the correct definition for each. The best way to achieve most of these features would be to use an object for the vocabulary items instead of an array&mdash;this would allow me to set different properties for each word, including "Latin," "English," "part of speech," "conjugation," etc. If I were to do this, I would have much more flexibility in choosing how to display the flash card content to users.
 
 Despite the issues discussed above, I believe this app could be used as a tool for beginning Latin students to drill their vocabulary. It would be easy enough to add words to the present array and cover additional units of *Wheelock's Latin*.
