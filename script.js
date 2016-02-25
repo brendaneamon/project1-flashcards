@@ -46,7 +46,7 @@ var displayWord = function() {
 form.addEventListener("submit" , function(evt){
   evt.preventDefault();
   var response = (input.value).toLowerCase();
-    if ((vocabWords[0][1]).includes(response)) {
+    if ((vocabWords[0][1]).includes(response) && (response.length >= 2)) {
       teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
       var correctCard = vocabWords.shift();
       correctAnswers.push(correctCard);
