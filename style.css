@@ -8,7 +8,7 @@ body {
 
 header {
   padding: 20px;
-  background-color: DarkViolet;
+  background-color: #66023C; /* Tyrian Purple, a proper Roman color */
   border-radius: 12px;
 }
 
@@ -19,12 +19,14 @@ h1 {
   display: block;
   padding-bottom: 3px;
   border-bottom: 3px solid black;
+  color: #fff;
 }
 
 p {
   font-size: 2em;
   max-width: inherit;
   display: block;
+  color: #fff;
 }
 
 #mainBackground {
@@ -47,7 +49,7 @@ p {
   font-size: 3em;
   background-color: #fff;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .teacherResponse {
@@ -61,7 +63,7 @@ p {
   font-family: inherit;
   font-size: 2.5em;
   background-color: #fff;
-  opacity: 0.8;
+  opacity: 0.85;
   border-radius: 5px;
 }
 
