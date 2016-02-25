@@ -29,6 +29,12 @@ Technologies Used
 This web application was built using HTML, CSS, and Vanilla JavaScript.
 
 
+Installation instructions
+-------------------------
+
+Users may access this app at URL and may play the flash card game in whatever browser they prefer (Chrome or Firefox recommended).
+
+
 Approach Taken & Challenges Faced
 ---------------------------------
 
@@ -38,13 +44,26 @@ I began with the HTML, which was uncomplicated and has remained largely unchange
 
 Next, I began entering the vocabulary items into two separate arrays in the `script.js` file. After some consultation with instructors, I changed the approach to a single nested array, with 20 vocabulary words each consisting of an array of two elements. I also declared a number of global variables to make it easier to target the various HTML elements where the flash card text and answers would be displayed.
 
-I spent a good amount of time on the second project day trying to establish a preliminary layout in CSS, and this has remained largely unchanged since that morning. My next step was to determine how best to access vocabulary items in the array, which also proved relatively straightforward. The biggest challenge was figuring out how to cycle through each entry in the array in order, displaying each one in turn. I first attempted a `for` loop and then a `while` loop, each of which ended up looping through the entire array before displaying anything to the user.
+I spent a good amount of time on the second project day trying to establish a preliminary layout in CSS, and this has remained largely unchanged since that morning. My next step was to determine how best to access vocabulary items in the array, which also proved relatively straightforward. The biggest challenge was figuring out how to cycle through each entry in the array in order, displaying each one in turn. I first attempted a `for` loop and then a `while` loop, each of which ended up looping through the entire array before displaying anything to the user. I used `debugger` to troubleshoot the issue, but some helpful suggestions from others pointed me in a different direction that was ultimately more successful.
 
 I had a good deal of help from instructors (particularly Joe, who, felicitously enough, has a background in Latin) in figuring out how to create the `displayWord()` function and how to use an event listener to check user submissions against the array of vocabulary items. Once I had this figured out, I was able to use the shuffling method that we employed in creating the "High Card" game for homework.
 
 A new challenge arose when I had to figure out how to make the game end when the user had cycled through all the cards. Ultimately, I created two new, empty arrays for correct answers and incorrect answers. I used `array.shift()` to remove each card from the top of the stack; `array.push()` was utilized for placing the card in the appropriate array, depending on whether or not the answer was correct.
 
-By the end of the third project day, I had a functioning flash card game with some bare-bones styling. I solicited feedback from a friend, who is a senior web developer. He provided me with some helpful suggestions about how to improve my app, so of which I incorporated into the version
+By the end of the third project day, I had a functioning flash card game with some bare-bones styling. I solicited feedback from a friend, who is a senior web developer. He provided me with some helpful suggestions about how to improve my app, some of which I incorporated into the current live version:
+* Array cleanup for enhanced readability of code
+* Change the method of checking correct answers to allow multiple correct answers
+* Ensuring that answers are at least two characters in length
+
+My final step in this project was to clean up the CSS a bit more (as much as is possible) and practice demonstrating it for a user. Overall, the finished product falls somewhere in the "Silver" range as described below, though I am not certain about how well I apportioned features to each version.
+
+
+Unsolved Problems
+-----------------
+
+Given some additional time, I believe I could implement a way for users to flip through cards in English-to-Latin or Latin-to-English mode. I would also try to take the cards from the `incorrectAnswers` array and re-display them to the user until the user should provide the correct definition for each. The best way to achieve most of these features would be to use an object for the vocabulary items instead of an array&mdash;this would allow me to set different properties for each word, including "Latin," "English," "part of speech," "conjugation," etc. If I were to do this, I would have much more flexibility in choosing how to display the flash card content to users.
+
+Despite the issues discussed above, I believe this app could be used as a tool for beginning Latin students to drill their vocabulary. It would be easy enough to add words to the present array and cover additional units of *Wheelock's Latin*.
 
 
 Gold, Silver, & Bronze versions

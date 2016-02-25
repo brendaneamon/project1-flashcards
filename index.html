@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
     <title>Vocabulary – Wheelock's Latin Unit I</title>
   </head>
   <body>
     <header>
-      <h1>Vocabulary for Unit I of <em>Wheelock's Latin</em></h1>
-      <p>Please respond with the appropriate English definition for the Latin word on each flash card. All responses should be typed in the form field directly below the flash card. Any of the definitions listed in Wheelock will be acceptable, provided that you spell the English word correctly. Please provide all verbs in dictionary format (e.g., <em>irrumo, irrumare, irrumavi, irrumatum</em> would be "defile").</p>
+      <h1>Vocabulary for Unit I of <span class="bookTitle">Wheelock's Latin</span></h1>
+      <p>Please respond with the appropriate English definition for the Latin word on each flash card. All responses should be typed in the form field directly below the flash card. Any of the definitions listed in Wheelock will be acceptable, provided that you spell the English word correctly. Please provide all verbs in dictionary format (e.g., "irrumo, irrumare, irrumavi, irrumatum" would be "defile").</p>
     </header>
-    <!--The flash card and teacher response are displayed here, beneath the instructions-->
+    <!-- The dynamic elements of the page are all below the header. -->
     <div id="mainBackground"</div>
       <div class="flashCard"></div>
+      <!-- Below is the submission form for user responses -->
       <div class="formContainer">
         <form id="submissionForm">
           <input type="text" id="answer">
           <button type="submit" id="button">Submit Answer</button>
         </form>
       </div>
+      <!-- The section below contains the area with respones indicating whether or not the user's answer was correct -->
       <div class="teacherResponse"></div>
     </div>
     <script src="script.js"></script>
