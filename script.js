@@ -50,11 +50,13 @@ form.addEventListener("submit" , function(evt){
       teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
       var correctCard = vocabWords.shift();
       correctAnswers.push(correctCard);
+      form.reset();
       ((vocabWords.length > 0) ? displayWord() : gameOver());
     } else {
       teacherResponse.innerHTML = "Sorry, but that's incorrect. The correct answer was '" + vocabWords[0][1] +".'";
       var incorrectCard = vocabWords.shift();
       incorrectAnswers.push(incorrectCard);
+      form.reset();
       ((vocabWords.length > 0) ? displayWord() : gameOver());
     }
 });
