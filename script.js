@@ -47,6 +47,7 @@ var displayWord = function() {
 
 form.addEventListener("submit" , function(evt){
   evt.preventDefault();
+  // AM: You don't need () around input.value.
   var response = (input.value).toLowerCase();
     // AM: Noticing a lot of similarities between the code in these if and else blocks.
     // AM: Could be an opportunity to refactor and encapsulate this behavior in a function.
