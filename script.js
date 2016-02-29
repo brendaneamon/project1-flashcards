@@ -1,3 +1,5 @@
+// AM: Your use of different selectors here got me thinking about this post: http://ryanmorr.com/abstract-away-the-performance-faults-of-queryselectorall/
+// AM: Take a look at it if you're interested in learning about the pros/cons of using `querySelector` vs. more specific selectors like `getElementById`
 var form = document.getElementById("submissionForm");
 var input = document.querySelector("#answer");
 var flashCard = document.querySelector(".flashCard");
@@ -46,7 +48,12 @@ var displayWord = function() {
 form.addEventListener("submit" , function(evt){
   evt.preventDefault();
   var response = (input.value).toLowerCase();
+    // AM: Noticing a lot of similarities between the code in these if and else blocks.
+    // AM: Could be an opportunity to refactor and encapsulate this behavior in a function.
     if ((vocabWords[0][1]).includes(response) && (response.length >= 2)) {
+      // AM: While this works, what if you added functionality that allowed users to go back and forth between questions?
+      // AM: Another refactoring opportunity would be to make it so that the app is not restricted to reading the question/answer pair that is at the front of the array.
+      // AM: This would probably involve keeping track of some sort of index/counter that changes as the user navigates through different questions.
       teacherResponse.innerHTML = "You got it! The correct answer was '" + vocabWords[0][1] +".'";
       var correctCard = vocabWords.shift();
       correctAnswers.push(correctCard);
@@ -66,3 +73,5 @@ function gameOver() {
 };
 
 displayWord();
+
+// AM: Major kudos on keeping your Javascript file to under 70 lines! Super readable.
