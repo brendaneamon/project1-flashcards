@@ -12,15 +12,15 @@ See below for my project evaluation. Feel free to hit me up via Slack or GitHub 
 
 > Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?  
 
-**Meets Expectations:** Good job here. You met all the technical requirements and look like you have a pretty good grasp of all the concepts taught prior to this project. I think taking this project to the next level would entail implementing the refactoring opportunities I mentioned in my inline code comments and taking on some new features. The user-submitted question/answer pairs you mentioned in your submission (which I begin to address below) would be a good one!
+**Meets Expectations:** Good job here. You met all the technical requirements and look like you have a pretty good grasp of all the concepts taught prior to this project. I think taking this project to the next level would entail implementing the refactoring opportunities I mentioned in my [inline code comments](https://github.com/brendaneamon/project1-flashcards/pull/1) and taking on some new features. The user-submitted question/answer pairs you mentioned in your submission (which I begin to address below) would be a good one!
 
 ## Code Quality
 
 > Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors have in class?  
 
-**Exceeds Expectations:** Major kudos on keeping your code very short, well-indented and well-commented. Had no problem identifying which piece of code is responsible for what. I made note of a couple refactoring opportunities if you choose to revisit this.  
+**Exceeds Expectations:** Major kudos on keeping your code very short, well-indented and well-commented. Had no problem identifying which piece of code is responsible for what. [I made note](https://github.com/brendaneamon/project1-flashcards/pull/1) of a couple refactoring opportunities if you choose to revisit this.  
 
-Make sure to take a look at the inline code comments I made in this [pull request]().
+Make sure to take a look at the inline code comments I made in this [pull request](https://github.com/brendaneamon/project1-flashcards/pull/1).
 
 ## In Response To Your Questions...
 
